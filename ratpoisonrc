@@ -1,0 +1,74 @@
+alias term exec xterm
+escape F12
+
+exec xrdb -merge "$HOME"/.Xdefaults
+warp off
+startup_message off
+set winname class
+defborder 0
+set padding 0 14 0 0
+defbarpaddzing 0 0
+exec xsetroot -solid black -cursor_name left_ptr
+bind semicolon colon
+set bargravity sw
+set winfmt %n %s %t
+set fgcolor yellow
+set bgcolor black
+set font "Terminus-12"
+
+
+alias showroot exec ratpoison -c fdump; ratpoison -c 'select -' -c only
+alias unshowroot exec ratpoison -c "frestore at $HOME/.rpfdump"
+
+### Escritorios virtuales/Workspaces
+exec rpws 1
+exec /usr/bin/rpws init 6 -k
+
+## bind = F13
+bind F1 exec rpws 1
+bind F2 exec rpws 2
+bind F3 exec rpws 3
+
+
+#Focus
+bind J exchangedown
+bind K exchangeup
+bind L exchangeright
+bind H exchangeleft
+
+bind j focusdown
+bind l focusright
+bind h focusleft
+
+##Alt-tab
+definekey top M-Tab next
+definekey top M-ISO_Left_Tab prev
+
+
+### Atajos de teclas/Keybindings
+bind e exec xfe
+bind f exec iceweasel
+bind m exec sylpheed
+bind u exec xchat
+bind l exec leafpad
+bind r restart
+bind Pause exec sudo /sbin/shutdown -h now
+bind w windows
+bind space exec xterm
+bind k kill
+bind Escape abort
+bind o only
+
+rudeness 13
+
+## Las teclas de de la fila de arriba no precisan de bind (F13)
+# Para lanzar un Run box/To launch a Run box (Ctrl+Space bar):
+definekey top C-space exec
+
+# Para hacer un screenshot/To make a screenshot (Press the Print key)
+definekey top Print exec xterm -e scrot -cd 10
+
+
+# Sound Volume
+bind KP_Multiply exec amixer set Master 5%+
+bind KP_Divide exec amixer set Master 5%-

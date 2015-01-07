@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/rorchach/Documents/S7/DSP_LAB/LAB1/codes'
+let g:netrw_dirhist_2='/home/rorchach/Documents/S7/DSP_LAB/LAB1/lab1'
+let g:netrw_dirhist_3='/home/rorchach/Documents/Project/Appendix-Matlab codes'
+let g:netrw_dirhist_4='/home/dspace/DSpace/dspace1/config/spring/api'
+let g:netrw_dirhist_5='/home/dspace/DSpace/dspace1/etc/postgres'
+let g:netrw_dirhist_6='/home/dspace/DSpace/dspace1/etc/postgres/xmlworkflow'
+let g:netrw_dirhist_7='/home/egleba/.config'
